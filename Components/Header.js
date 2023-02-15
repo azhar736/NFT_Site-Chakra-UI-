@@ -42,7 +42,7 @@ export default function Simple() {
   return (
     // bg={useColorModeValue("gray.100", "gray.900")}
     <>
-      <Box px={4} border="4px">
+      <Box px={4} position="absolute" top="0%" left="0%" right="0%" mt="20px">
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <IconButton
             size={"md"}

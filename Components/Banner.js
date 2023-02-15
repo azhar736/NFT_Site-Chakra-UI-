@@ -4,13 +4,23 @@ import BannnerImage from "../public/assets/PX-main-3d.png";
 function Banner() {
   return (
     <Box
-      border="1px solid red"
       display="flex"
       alignItems="center"
       justifyContent="center"
-      height="50vh"
+      height="75vh"
+      backgroundImage="url(./assets/bg-top.png)"
+      backgroundSize="cover"
+      backgroundPosition="center center"
     >
-      <Image src={BannnerImage} quality={100} alt="Banner" />
+      <Box>
+        <Image
+          src={BannnerImage}
+          height={340}
+          width={350}
+          quality={100}
+          alt="Banner"
+        />
+      </Box>
     </Box>
   );
 }
