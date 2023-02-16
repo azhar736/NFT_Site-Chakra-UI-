@@ -19,8 +19,6 @@ import { FaFacebookF } from "react-icons/fa";
 import { BsInstagram } from "react-icons/bs";
 import Image from "next/image";
 import DiscordTop from "../public/assets/discord-top.png";
-const Links = ["Dashboard", "Projects", "Team"];
-
 const NavLink = ({ children }) => (
   <Link
     px={2}
@@ -106,25 +104,12 @@ export default function Simple() {
               >
                 <Image src={DiscordTop} />
               </MenuButton>
-              <MenuList>
-                <MenuItem>Link 1</MenuItem>
-                <MenuItem>Link 2</MenuItem>
-                <MenuDivider />
-                <MenuItem>Link 3</MenuItem>
-              </MenuList>
+              <MenuList></MenuList>
             </Menu>
           </Flex>
         </Flex>
 
-        {isOpen ? (
-          <Box pb={4} display={{ md: "none" }}>
-            <Stack as={"nav"} spacing={4}>
-              {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
-              ))}
-            </Stack>
-          </Box>
-        ) : null}
+        {isOpen && null}
       </Box>
       {/* <Box p={4}>Main Content Here</Box> */}
     </>

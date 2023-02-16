@@ -21,6 +21,8 @@ import { BsInstagram } from "react-icons/bs";
 import { Input } from "@chakra-ui/react";
 import { Heading } from "@chakra-ui/react";
 import { FiMail } from "react-icons/fi";
+import ReactPlayer from "react-player";
+import { useRef, useEffect, useState } from "react";
 import {
   Accordion,
   AccordionItem,
@@ -28,7 +30,10 @@ import {
   AccordionPanel,
   AccordionIcon,
 } from "@chakra-ui/react";
+import VideoPlayer from "./VideoPlayer";
 function Body() {
+  const video1Url = "./assets/video/fanpower-anim-loop.mp4";
+  const video2Url = "./assets/video/lootbox_turn_LP.mp4";
   return (
     <Box bg="black">
       <Container>
@@ -141,6 +146,7 @@ function Body() {
       {/* <AspectRatio maxW="560px" ratio={1}>
         <video src="./public/assets/Video/fanpower-anim-loop.mp4" />
       </AspectRatio> */}
+      <VideoPlayer videoUrl={video1Url} />
       <Container>
         <Box>
           <Text
@@ -160,7 +166,7 @@ function Body() {
           </Text>
         </Box>
         <Box my="30px">
-          <Image src={LootBox} quality={100} alt="levels" />
+          <VideoPlayer videoUrl={video2Url} />
         </Box>
         <Box>
           <Heading
@@ -287,7 +293,7 @@ function Body() {
             backgroundSize="cover"
             backgroundPosition="center center"
           >
-            <Image src={Avatar} quality={100} alt="avatar" zIndex="-1" />
+            <Image src={Avatar} quality={100} alt="avatar" zindex="-1" />
           </Box>
         </Container>
       </Box>
@@ -494,7 +500,7 @@ function Body() {
         backgroundSize="cover"
         backgroundRepeat="no-repeat"
         backgroundPosition="center center"
-        height="55vh"
+        height="40vh"
       >
         <Box display="flex" justifyContent="space-evenly" py="30px">
           <Box

@@ -12,13 +12,15 @@ function Banner() {
       backgroundSize="cover"
       backgroundPosition="center center"
     >
-      <Box>
-        <Image
-          src={BannnerImage}
-          height={340}
-          width={350}
+      <Box border="4px solid red" w={[300, 400, 800]}>
+        <img
+          src="/assets/PX-main-3d.png"
           quality={100}
           alt="Banner"
+          width="100%"
+          height="100%"
+          layout="responsive"
+          objectFit="contain"
         />
       </Box>
     </Box>
