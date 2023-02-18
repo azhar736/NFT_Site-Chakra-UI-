@@ -19,99 +19,67 @@ import { FaFacebookF } from "react-icons/fa";
 import { BsInstagram } from "react-icons/bs";
 import Image from "next/image";
 import DiscordTop from "../public/assets/discord-top.png";
-const NavLink = ({ children }) => (
-  <Link
-    px={2}
-    py={1}
-    rounded={"md"}
-    _hover={{
-      textDecoration: "none",
-      bg: useColorModeValue("gray.200", "gray.700"),
-    }}
-    href={"#"}
-  >
-    {children}
-  </Link>
-);
 
 export default function Simple() {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-
   return (
-    // bg={useColorModeValue("gray.100", "gray.900")}
     <>
-      <Box px={4} position="absolute" top="0%" left="0%" right="0%" mt="20px">
-        <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
-          <IconButton
-            size={"md"}
-            backgroundColor="#802dff"
-            color="white"
-            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-            aria-label={"Open Menu"}
-            display={{ md: "none" }}
-            onClick={isOpen ? onClose : onOpen}
-          />
-          <HStack spacing={8} alignItems={"center"}>
-            <Box></Box>
-            <HStack
-              as={"nav"}
-              spacing={4}
-              display={{ base: "none", md: "flex" }}
-            >
-              {/* {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
-              ))} */}
-              <NavLink>
-                <Box
-                  color="white"
-                  bg="#802dff"
-                  fontSize="22px"
-                  h="40px"
-                  w="40px"
-                  display="flex"
-                  alignItems="center"
-                  justifyContent="center"
-                  rounded="full"
-                >
-                  <FaFacebookF />
-                </Box>
-              </NavLink>
-              <NavLink>
-                <Box
-                  color="white"
-                  bg="#802dff"
-                  fontSize="22px"
-                  h="40px"
-                  w="40px"
-                  display="flex"
-                  alignItems="center"
-                  justifyContent="center"
-                  rounded="full"
-                >
-                  <BsInstagram />
-                </Box>
-              </NavLink>
-            </HStack>
-          </HStack>
+      <Box
+        pl={["8px"]}
+        position="absolute"
+        top="0%"
+        left="0%"
+        right="0%"
+        mt="20px"
+      >
+        <Flex
+          h={16}
+          alignItems={"center"}
+          justifyContent={"space-between"}
+          mx={["5px", "30px", "80px", "160px"]}
+        >
           <Flex alignItems={"center"}>
-            <Menu>
-              <MenuButton
-                as={Button}
-                rounded={"full"}
-                variant={"link"}
-                cursor={"pointer"}
-                minW={0}
+            <Flex w="100px" justifyContent="space-between">
+              <Box
+                color="white"
+                bg="#802dff"
+                fontSize="22px"
+                h={["30px", "30px", "30px", "40px"]}
+                w={["30px", "30px", "30px", "40px"]}
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                rounded="full"
               >
-                <Image src={DiscordTop} />
-              </MenuButton>
-              <MenuList></MenuList>
-            </Menu>
+                <FaFacebookF style={{ fontSize: "18px" }} />
+              </Box>
+              <Box
+                color="white"
+                bg="#802dff"
+                fontSize="22px"
+                h={["30px", "30px", "30px", "40px"]}
+                w={["30px", "30px", "30px", "40px"]}
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                rounded="full"
+              >
+                <BsInstagram style={{ fontSize: "18px" }} />
+              </Box>
+            </Flex>
+          </Flex>
+          <Flex alignItems={"center"} mt="12px">
+            <Flex
+              as={Button}
+              rounded={"full"}
+              variant={"link"}
+              cursor={"pointer"}
+              w={["200px", "220px", "240px", "260px", "280px"]}
+            >
+              <Image src={DiscordTop} />
+            </Flex>
           </Flex>
         </Flex>
-
-        {isOpen && null}
       </Box>
-      {/* <Box p={4}>Main Content Here</Box> */}
     </>
   );
 }

@@ -12,7 +12,10 @@ function Banner() {
       backgroundSize="cover"
       backgroundPosition="center center"
     >
-      <Box border="4px solid red" w={[300, 400, 800]}>
+      <Box
+        w={["100%", "90%", "80%", "70%", "60%"]}
+        mt={["3vw", "2vw", "2rem", "6rem"]}
+      >
         <img
           src="/assets/PX-main-3d.png"
           quality={100}
