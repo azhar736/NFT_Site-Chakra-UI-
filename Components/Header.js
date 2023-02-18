@@ -38,7 +38,7 @@ export default function Simple() {
           mx={["5px", "30px", "80px", "160px"]}
         >
           <Flex alignItems={"center"}>
-            <Flex w="100px" justifyContent="space-between">
+            <Flex w="70px" justifyContent="space-between">
               <Box
                 color="white"
                 bg="#802dff"
